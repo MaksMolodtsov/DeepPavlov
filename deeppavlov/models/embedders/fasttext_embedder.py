@@ -15,7 +15,7 @@
 from logging import getLogger
 from typing import Iterator
 
-import fastText
+import fasttext
 import numpy as np
 from overrides import overrides
 
