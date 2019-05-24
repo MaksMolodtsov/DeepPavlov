@@ -15,7 +15,7 @@
 from logging import getLogger
 from typing import Iterator
 
-import fasttext as fastText
+import fastText
 import numpy as np
 from overrides import overrides
 
@@ -56,7 +56,7 @@ class FasttextEmbedder(Embedder):
     @overrides
     def __iter__(self) -> Iterator[str]:
         """
-        Iterate over all words from fasttext model vocabulary
+        Iterate over all words from fastText model vocabulary
 
         Returns:
             iterator
