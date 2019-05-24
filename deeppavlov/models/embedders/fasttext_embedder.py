@@ -15,7 +15,7 @@
 from logging import getLogger
 from typing import Iterator
 
-import fasttext
+import fasttext as fastText
 import numpy as np
 from overrides import overrides
 
@@ -50,7 +50,7 @@ class FasttextEmbedder(Embedder):
         Load fastText binary model from self.load_path
         """
         log.info(f"[loading fastText embeddings from `{self.load_path}`]")
-        self.model = fasttext.load_model(str(self.load_path))
+        self.model = fastText.load_model(str(self.load_path))
         self.dim = self.model.get_dimension()
 
     @overrides
