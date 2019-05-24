@@ -50,13 +50,13 @@ class FasttextEmbedder(Embedder):
         Load fastText binary model from self.load_path
         """
         log.info(f"[loading fastText embeddings from `{self.load_path}`]")
-        self.model = fastText.load_model(str(self.load_path))
+        self.model = fasttext.load_model(str(self.load_path))
         self.dim = self.model.get_dimension()
 
     @overrides
     def __iter__(self) -> Iterator[str]:
         """
-        Iterate over all words from fastText model vocabulary
+        Iterate over all words from fasttext model vocabulary
 
         Returns:
             iterator
